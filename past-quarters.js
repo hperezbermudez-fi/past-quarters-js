@@ -2,7 +2,7 @@ function getQuarters(year){
     return [new Date(year, 12 - 1, 31), new Date(year, 9 - 1, 30), new Date(year, 6 - 1, 30), new Date(year, 3 - 1, 31)];
 }
 
-function getPastQuarters(lessThanDay, howManyQuarters) {
+function getLastQuarters(lessThanDay, howManyQuarters) {
     let year = lessThanDay.getFullYear();
     const quarters = getQuarters(year);
 
@@ -37,7 +37,7 @@ function getPastQuarters(lessThanDay, howManyQuarters) {
     return selectedQuarters;
 }
 
-function getPastFourQuarters(lessThanDay) {
+function getLastFourQuarters(lessThanDay) {
     const year = lessThanDay.getFullYear();
     const quarters = [...getQuarters(year), ...getQuarters(year - 1)];
 
